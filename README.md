@@ -1,23 +1,23 @@
 # Website Performance Optimization Portfolio Project
 
 This Project Contains two parts.
- 1. We are supposed to optimize a given portfolio page to achieve a score of 90 or above on google page insight.
- 2. We are supposed to optimize the FPS on a page to run at silky smooth 60FPS.
+ 1. To optimize a given portfolio page to achieve a score of 90 or above on google page insight.
+ 2. To optimize the FPS on a page to run at silky smooth 60FPS.
 
-##Optimizing the Portfolio Page to achieve a page insight score of 90+.
+
 
 ###Link to Optimized Page:
-http://prateekcoder.github.io/Front-End-Nanodegree-P4-Website-Optimization/
+http://www.chadhindsight.github.io
 
 ####The page insight Score of the Portfolio initially:
-The page provided to me had a very poor page insight score of 28 for mobile view and 30 for desktop view.
+The page provided had a page insight score of 28 for mobile view and 30 for desktop view.
 
 ![alt](http://s22.postimg.org/ick38se4x/Mobile_View_Before.png)
 
 ![alt](http://s18.postimg.org/ylprqhwo9/Desktop_View_Before.png)
 
 ####First Optimization (Image Optimization):
-The very first Optimization I did was the Image Optimization, Images takes up almost 95% of the data which are being downloaded by the clent, so images are the most critical things towards our Critical Path Optimization part. I customized 2 images namely the profilepic and the pizzeria.jpg. Reducing pizzeria.jpg to 18% of its original size helped in reducing the image from 2.25mb to a whooping 129kb. Further to achieve better optimization I converted the image format from jpg to webp, which further helped me reduce the image size from 129kn to 75.1kb, finally helping me compress the image appox. by 97%-98%. I did all the image optimization using ImageMagick cli tool. I also optimized the profilepic and converted into webp format.
+The very first Optimization that was done was the Image Optimization, Images takes up almost 95% of the data which are being downloaded by the clent, so images are the most critical things towards our Critical Path Optimization part. I customized 2 images namely the profilepic and the pizzeria.jpg. Reducing pizzeria.jpg to 18% of its original size helped in reducing the image from 2.25mb to a whooping 129kb. Further to achieve better optimization I converted the image format from jpg to webp, which further helped me reduce the image size from 129kn to 75.1kb, finally helping me compress the image appox. by 97%-98%. I did all the image optimization using ImageMagick cli tool. I also optimized the profilepic and converted into webp format.
 Here is the result from page insight after Image Optimization:
 
 ![alt](http://s22.postimg.org/m4looxh1t/Mobile_View_Image_Optimization.png)
@@ -57,21 +57,6 @@ After all these optimization I was finally able to achieve a google page insight
 Using Chrome Developement Tools and loading the original pizza.html in an icognito mode shows the following loading times and number of frames in the console:
 
 Average time to generate last 10 frames: 36.56720000290079ms FPS: Way over 60 FPS
-
-##Optimizations done in JavaScript:
- * Replaced "querySelector" with "getElementById", since the selectors are not too complex I chose getElementbyId since it is less expensive.
- * Replaced "querySelectorAll" with "getElementsByClassName", since querySelector is also way too expensive for its desired purpose on pizza.html.
- * Created a new variable allPizzaContainers for all pizza containers to apply dx and newwidth to all pizza containers; placed all variables out of the for loop.
- * Placed the variable pizzasDiv in the for loop outside the for loop.
- * Added createDocumentFragment to create a imaginary node to append its values to the pizza.html, reduced the number of Pizzas to the media size and the max of pizzas to 100.
- * Added caching to actually cash items and if cashed to return the cached items.
-
-##Optimizations done in CSS:
- * Added width and style of Pizzas to style.css, in CSS also manipulated backface-visibility since it is a visual property, that will cause painting to occur. Painting is obviously a super expensive operation in this project.
- * In CSS I also added transform to force hardware acceleration.
-
-##Final Result After Optimizations:
-![alt](https://s18.postimg.org/5q5rrpwd5/After.png)
 
 Yes that's 60fps. Now the webpage is rendering at a silky smooth 60fps or higher.
 
