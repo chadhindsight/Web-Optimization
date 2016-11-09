@@ -25,7 +25,7 @@ Here is the result from page insight after Image Optimization:
 ![alt](http://s7.postimg.org/kx7udxuh7/Desktop_View_Image_Optimization.png)
 
 ####Second Optimization (Google Font and perfmatter.js):
-The second optimization was the JavaScript optimization and the external link to google font optimization. Since the JS file was not a very big file, the best optiion was to just inline that in the script tag and make it async so that it does not block the rendering process and I also made the Google analytics JS async so that it does not block the rendering process. Instead of creating a new link tag which took extra time while rendering for fetching the google font API, I attached it with href in the same styles.css link tag to stop it from taking extra amount if time while rendering.
+The second optimization was the JavaScript optimization and the external link to google font optimization. Since the JS file was not a very big file, the best optiion was to just inline that in the script tag and make it async so that it does not block the rendering process and I also made the Google analytics JS async so that it does not block the rendering process. Instead of creating a new link tag which took a bit more time while rendering for fetching the google font API, I attached it with href in the same styles.css link tag to stop it from taking extra amount if time while rendering.
 Here is the google page insight result after Google font and JS optimization:
 
 ![alt](http://s28.postimg.org/xbv1a0b4t/Mobile_View_After_Google_Font_Optimization.png)
