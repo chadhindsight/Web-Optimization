@@ -6,10 +6,10 @@ This Project Contains two parts.
 
 
 
-###Link to Optimized Page:
+### Link to Optimized Page:
 http://chadhindsight.github.io/
 
-####The page insight Score of the Portfolio initially:
+#### The page insight Score of the Portfolio initially:
 The page provided had a page insight score of 28 for mobile view and 30 for desktop view.
 
 ![alt](http://s22.postimg.org/ick38se4x/Mobile_View_Before.png)
